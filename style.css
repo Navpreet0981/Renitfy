@@ -1,0 +1,27 @@
+/* Custom CSS for List Container */
+.list-container {
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrollbar when content exceeds max height */
+    border: 1px solid #ddd; /* Optional border for the container */
+    background-color: #f8f9fa; /* Light background color for contrast */
+}
+
+/* Item Image Styling */
+.item-image {
+    width: 150px; /* Fixed width for images */
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images are scaled correctly */
+    border-radius: 5px; /* Optional: Adds rounded corners to images */
+}
+.flex-grow-1{
+    margin-left: 20px;
+}
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+#navHeader{
+    display: none;
+}

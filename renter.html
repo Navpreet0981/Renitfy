@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentofy - Renter Dashboard</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="renter.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap 4 JS (includes Popper.js) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="p-3 mb-1 border-bottom">
+        <!-- Navbar Header Section (Collapsed by default) -->
+        <div class="text-bg-white collapse" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4>About</h4>
+                        <p class="text-body-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4>Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-black text-dark">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-black text-dark">Like on Facebook</a></li>
+                            <li><a href="#" class="text-black text-dark">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none ">
+                    <h2>Welcome, UserName</h2>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-2 text-dark">
+                    <li><a href="#" id="home" class="nav-link px-2 text-dark">Home</a></li>
+                    <li><a href="#" id="about" class="nav-link px-2 text-dark">About</a></li>
+                    <li><a href="#" id="buyer" class="nav-link px-2 text-dark">Buy</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark">Customers</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control text-black" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <!-- Profile Dropdown -->
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block text-dark text-decoration-none dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <img src="Images/profile.png" alt="Profile" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-2">
+        <h2 class="text-center">Renter Dashboard</h2>
+        <!-- Form to Add Item -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <h5>Add New Item for Rent</h5>
+            </div>
+            <div class="card-body">
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" class="form-control" id="itemName" placeholder="Enter item name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Item Description</label>
+                        <textarea class="form-control" id="itemDescription" rows="3" placeholder="Enter item description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Price (per day)</label>
+                        <input type="number" class="form-control" id="itemPrice" placeholder="Enter price per day" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemImage">Item Image</label>
+                        <input type="file" class="form-control-file" id="itemImage" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Display List of Items -->
+        <div class="mt-5">
+            <h4>Your Items</h4>
+            <ul class="list-group" id="itemsList">
+                <!-- Dynamically generated items will appear here -->
+            </ul>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Rentify. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="renter.js"></script>
+</body>
+</html>
